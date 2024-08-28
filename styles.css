@@ -1,0 +1,164 @@
+body {
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 700;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    text-transform: uppercase;
+}
+
+#game-wrapper {
+    width: 100%;
+    max-width: 1200px;
+    height: 60vh; /* Tämä asettaa kiinteän korkeuden */
+    min-height: 600px; /* Tämä varmistaa minimikoon */
+    background: white;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: auto; /* Tämä mahdollistaa vierityksen, jos sisältö ei mahdu */
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+}
+
+#menu, #game-container {
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 28px;
+    margin-top: 0;
+}
+
+#level-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.level-button, button {
+    background-color: white;
+    color: black;
+    border: 2px solid black;
+    padding: 12px 24px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: transform 0.2s, background-color 0.2s;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.level-button:hover, button:hover {
+    transform: scale(1.05);
+    background-color: #f0f0f0;
+}
+
+#game-title {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+#drop-boxes, #choices {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin: 20px 0;
+}
+
+.box, .choice {
+    width: 80px;
+    height: 80px;
+    border: 2px solid #ccc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+}
+
+.choice {
+    cursor: pointer;
+}
+
+.choice.faded {
+    opacity: 0.5;
+    cursor: default;
+}
+
+.choice.incorrect {
+    border-color: red;
+}
+
+#next-level {
+    margin: 20px auto 0;
+    display: block;
+}
+
+.star {
+    width: 60px;
+    height: 60px;
+    margin: 10px;
+}
+
+@media (max-width: 768px) {
+    body {
+        align-items: flex-start;
+        padding: 10px;
+    }
+
+    #game-wrapper {
+        border-radius: 0;
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    #game-title {
+        font-size: 20px;
+    }
+
+    .level-button, button {
+        font-size: 16px;
+        padding: 10px 20px;
+    }
+
+    .box, .choice {
+        width: 60px;
+        height: 60px;
+    }
+}
+
+@media (max-width: 768px) and (orientation: landscape) {
+    body {
+        align-items: center;
+    }
+
+    #game-wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 90vh;
+        width: 90%;
+    }
+
+    #level-buttons {
+        flex-direction: row;
+    }
+
+    .box, .choice {
+        width: 50px;
+        height: 50px;
+    }
+}
