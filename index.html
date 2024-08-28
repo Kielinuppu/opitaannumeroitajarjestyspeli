@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Numeropeli</title>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="game-wrapper">
+        <div id="menu">
+            <h1>Opitaan numeroita</h1>
+            <div id="level-buttons">
+                <button id="easy-button" class="level-button">Helppo</button>
+                <button id="medium-button" class="level-button">Keskivaikea</button>
+                <button id="hard-button" class="level-button">Vaikea</button>
+            </div>
+        </div>
+        <div id="game-container" style="display: none;">
+            <h1 id="game-title"></h1>
+            <div id="drop-boxes"></div>
+            <div id="choices"></div>
+            <button id="next-level" style="display: none;">Seuraava taso</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
